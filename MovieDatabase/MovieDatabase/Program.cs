@@ -4,18 +4,18 @@ using System.Reflection;
 
 List<Movie> movieList = new List<Movie>()
 {
-    new Movie("It","Horror"),
-    new Movie("The interview","Comedy"),
+    new Movie("It","horror"),
+    new Movie("The interview","comedy"),
     new Movie("focus","action"),
-    new Movie("Harry Potter","Fantasy"),
+    new Movie("Harry Potter","fantasy"),
     new Movie("John Wick","action"),
-    new Movie("interstellar","SciFi"),
+    new Movie("interstellar","scifi"),
     new Movie("jumanji","adventure"),
     new Movie("Lost City","adventure"),
     new Movie("Ironman","superhero"),
     new Movie("thor","superhero"),
 };
-
+movieList.Order();
 foreach (Movie movie in movieList)
 {
     Console.WriteLine($"{movie.title} - {movie.category}");
@@ -39,7 +39,6 @@ while (goAgain == true)
         {
             Console.WriteLine(movie.title);
         }
-        // How do I display the movies associated with that category
     }
     Console.WriteLine("Do you want to search for another category? (yes/no)");
     string userGoAgain = Console.ReadLine().ToLower();
@@ -49,8 +48,12 @@ while (goAgain == true)
     }
     else
     {
-        goAgain= false;
+        goAgain = false;
         Console.WriteLine("Goodbye!");
     }
 
 }
+
+
+
+
